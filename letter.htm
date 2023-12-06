@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>email</title>
+  <style>
+    :root {
+      --fontBig: 7em;
+      --fontxxxl: 5.5em;
+      --fontxxl: 3.4375em;
+      --fontxl: 2.75em;
+      --fontlg: 1.9375em;
+      --fontmd: 1.375em;
+      --fontsm: 1.125em;
+      --fontxs: 1em;
+      --fontxxs: 0.75em;
+      --dark: #000000;
+      --grey: #666666;
+      --greyLight: #979797;
+      --offWhite: #eeeeee;
+      --white: #ffffff;
+      --blue: #0071e3;
+      --blueRgba: "0, 113, 227";
+ 
+      --fontL: "Source Sans Pro light";
+      --fontR: "Source Sans Pro";
+      --gradient: #35c3f3 0%, #8b9fe8 20%, #e681d8 39%, #ffa9a4 76%, #fed2ce 100%;
+    }
+ 
+    * {
+      padding: 0;
+      margin: 0;
+    }
+ 
+    .quote {
+      width: 100vw;
+      height: 100vh;
+      position: sticky;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+ 
+    .TextContainer {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--dark);
+      color: var(--white);
+    }
+ 
+    .text {
+      width: 50%;
+      font-size: var(--fontlg);
+      position: relative;
+      height: var(--fontmd);
+      overflow: hidden;
+    }
+ 
+    span {
+      position: absolute;
+      transform: translateY(3rem);
+      animation-name: moveUp;
+      animation-duration: 2.5s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      font-family: var(--fontL);
+      background-image: linear-gradient(-45deg, var(--gradient));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+ 
+    @keyframes moveUp {
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+ 
+<body>
+  <section class="quote">
+    <div class="TextContainer">
+      <p class="text">
+        <span>&#8220; 云中谁寄锦书来，</span>
+      </p>
+      <p class="text">
+        <span>&nbsp;&nbsp;&nbsp;雁字回时，</span>
+      </p>
+      <p class="text">
+        <span>&nbsp;&nbsp;&nbsp;月满西楼。</a></table>
+            &#8221;</span>
+      </p>
+      <p class="text">
+        <span>&nbsp;&nbsp;&nbsp;给我写封信吧！</span>
+      </p>
+    <p class="text">
+        <span>&nbsp;&nbsp;&nbsp;<a href="mailto:1668130506@qq.com">点击这里给我写信</a></span>
+    </p>
+      <p>
+        <span><a href=index.html><font size="5px" color="white">返回首页</font></a></table></span>
+    </div>
+  </section>
+ 
+  <script>
+    const rows = document.querySelectorAll('span')
+    let delay = 0
+ 
+    for (let row of rows) {
+      row.style.setProperty('animation-delay', delay + 's')
+      delay = delay + 0.4
+    }
+  </script>
+</body>
+ 
+</html>
